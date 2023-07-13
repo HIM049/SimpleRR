@@ -1,0 +1,27 @@
+
+.article-list {
+    width: calc(100% * 1.3);
+    max-width: 750px;
+}
+.article-img-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-img-div img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.change-theme {
+    padding-left: 20px;
+}
+.change-theme-icon {
+    padding: 5px;
+    border-radius: 10px;
+}
+.change-theme-icon:hover{
+    background: var(--cardBcakgroundColour);
+    transition: var(--transition);
+}

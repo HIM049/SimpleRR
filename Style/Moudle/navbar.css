@@ -1,0 +1,63 @@
+
+.navbar {
+    /* 导航栏基础样式 */
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-box{
+    /* 导航栏内部结构 */
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-box div {
+    display: flex;
+    align-items: center;
+}
+.navbar-title {
+    /* 导航栏左侧博客标题 */
+    font-size: 19px;
+    font-weight: 800;
+    padding: 10px;
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.navbar-title:hover {
+    color: var(--cardBcakgroundColour);
+    background: #00A7DB;
+}
+.navbar-nav ul {
+    display: flex;
+}
+.navbar-nav li {
+    padding: 0 0 0 20px;
+}
+.navbar-nav-button {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.navbar-nav-button:hover {
+    background: var(--cardBcakgroundColour);
+    transition: var(--transition);
+}
+
+.navbar a:link {
+    color: var(--fontColour);
+}
+/* .navbar a:visited {
+    color: var(--fontColour);
+}
+.navbar a:hover {
+    color: var(--fontColour);
+} */
+.navbar a:active {
+    color: var(--fontColour);
+}
