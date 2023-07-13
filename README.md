@@ -1,0 +1,2 @@
+# SimpleRR
+A Typecho theme
