@@ -76,7 +76,7 @@ function getBuildTime()
 		}
 		$value["seconds"] = floor($time);
 
-		echo '' . $value['years'] . 'Year / ' . $value['days'] . 'Day ';
+		echo '' . $value['years'] . 'Year 	 / ' . $value['days'] . 'Day ';
 	} else {
 		echo '';
 	}
