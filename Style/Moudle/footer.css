@@ -1,0 +1,22 @@
+.footer {
+    background: var(--cardBackgroundColour);
+    margin-top: 20px;
+    height: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-text {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-text-line1 p {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.footer-text a:hover {
+    color: var(--primaryColour);
+}

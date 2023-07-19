@@ -1,4 +1,3 @@
-
 .navbar {
     /* 导航栏基础样式 */
     width: 100%;
@@ -7,7 +6,8 @@
     justify-content: space-between;
     align-items: center;
 }
-.navbar-box{
+
+.navbar-box {
     /* 导航栏内部结构 */
     width: 100%;
     max-width: 800px;
@@ -15,10 +15,12 @@
     display: flex;
     justify-content: space-between;
 }
+
 .navbar-box div {
     display: flex;
     align-items: center;
 }
+
 .navbar-title {
     /* 导航栏左侧博客标题 */
     font-size: 19px;
@@ -27,37 +29,56 @@
     border-radius: 10px;
     transition: var(--transition);
 }
+
 .navbar-title:hover {
-    color: var(--cardBcakgroundColour);
-    background: #00A7DB;
+    /* 导航栏左侧博客标题选中 */
+    color: var(--cardBackgroundColour);
+    background: var(--primaryColour);
 }
+
 .navbar-nav ul {
+    /* 导航栏右侧导航部分 */
     display: flex;
 }
+
 .navbar-nav li {
+    /* 导航栏右侧导航部分 */
     padding: 0 0 0 20px;
 }
+
 .navbar-nav-button {
+    /* 导航栏右侧导航按钮 */
     font-size: 17px;
     font-weight: 500;
     padding: 10px;
     border-radius: 10px;
-    
 }
+
 .navbar-nav-button:hover {
-    background: var(--cardBcakgroundColour);
+    /* 导航栏右侧导航按钮选中 */
+    background: var(--cardBackgroundColour);
+    transition: var(--transition);
+}
+
+.change-theme {
+    /* 导航栏主题切换按钮 */
+    padding-left: 20px;
+}
+
+.change-theme-icon {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.change-theme-icon:hover {
+    background: var(--cardBackgroundColour);
     transition: var(--transition);
 }
 
 .navbar a:link {
     color: var(--fontColour);
 }
-/* .navbar a:visited {
-    color: var(--fontColour);
-}
-.navbar a:hover {
-    color: var(--fontColour);
-} */
+
 .navbar a:active {
     color: var(--fontColour);
 }

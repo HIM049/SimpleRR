@@ -44,7 +44,6 @@ function thumb($obj)
 
 /**
  * blog运行时间
- * 秒转时间，格式 年 月 日 时 分 秒
  * 调用：<?php echo getBuildTime($this); ?>
  */
 date_default_timezone_set('Asia/Shanghai');
@@ -77,7 +76,7 @@ function getBuildTime()
 		}
 		$value["seconds"] = floor($time);
 
-		echo '' . $value['years'] . 'year ' . $value['days'] . 'day / ' . $value['hours'] . 'h ' . $value['minutes'] . 'min';
+		echo '' . $value['years'] . 'Year / ' . $value['days'] . 'Day ';
 	} else {
 		echo '';
 	}

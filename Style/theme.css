@@ -1,6 +1,10 @@
 :root {
     --backgroundColour: #ececec;
     --cardBackgroundColour: #fff;
+    --accentColour: #000000;
     --fontColour: #000000;
+    --primaryColour: #00A7DB;
+    --primaryColourPale: #00a8db12;
     --transition: 0.5s;
+    --shandow: 0 10px 10px rgba(0, 0, 0, 0.06);
 }
