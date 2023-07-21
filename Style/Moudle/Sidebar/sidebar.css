@@ -1,0 +1,14 @@
+.sidebar {
+    background: var(--cardBackgroundColour);
+    padding: 20px;
+    width: 240px;
+    border-radius: 10px;
+    position: fixed;
+    right: 40px;
+    top: 120px;
+    box-shadow: var(--shandow);
+}
+
+.sidebar-fix {
+    top: 20px;
+}
