@@ -9,7 +9,7 @@
 <div class="article-body">
     <h1 class="article-title"><?php $this->title() ?></h1>
     <div class="article-content">
-        <div class="article-content-div"><?php $this->content(); ?></div>
+        <div class="post-content"><?php $this->content(); ?></div>
     </div>
 </div>
 <?php $this->need('./Moudle/Sidebar/article-sidebar.php'); ?>

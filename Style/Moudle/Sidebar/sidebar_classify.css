@@ -1,3 +1,10 @@
+.index-sidebar-box {
+    background: var(--cardBackgroundColour);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+}
+
 .index-sidebar-classify {
     /* 侧边栏分类栏 */
     padding: 10px;

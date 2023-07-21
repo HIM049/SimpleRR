@@ -9,5 +9,9 @@
 <link rel="icon" href="<?php $this->options->themeUrl('./Imagine/favicon.ico'); ?>"/>
 <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
 
+<!-- CSS -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/public.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/theme.css'); ?>">
+
+<!-- Javascript -->
+<script src="<?php $this->options->themeUrl('./Javascript/jquery-3.5.1.min.js'); ?>"></script>
