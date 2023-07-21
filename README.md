@@ -1,5 +1,5 @@
 # SimpleRR
-一个简介但不简单的 Typecho 主题
+一个简洁但不简单的 Typecho 主题
 
 ---
 
