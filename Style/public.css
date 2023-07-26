@@ -34,3 +34,9 @@ body {
     max-width: 1000px;
     margin: auto;
 }
+
+@media (max-width: 1030px) {
+    .body {
+        padding: 0 20px;
+    }
+}

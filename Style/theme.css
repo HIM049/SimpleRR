@@ -9,3 +9,13 @@
     --transition: 0.5s;
     --shandow: 0 10px 10px rgba(0, 0, 0, 0.06);
 }
+
+[data-theme="dark"] {
+    --backgroundColour: #414141;
+    --cardBackgroundColour: #353535;
+    --cardAccentColour: #ccc;
+    --accentColour: #fff;
+    --fontColour: #ffffff;
+    --primaryColour: #00A7DB;
+    --primaryColourPale: #00a8db12;
+}
