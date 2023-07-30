@@ -28,16 +28,28 @@ function threadedComments($comments, $options)
 }
 
 /**
- * 文章封面图处理
+ * 文章封面图显示函数
  * 调用：<?php echo thumb($this); ?>
  */
+
 function thumb($obj)
 {
 	$attach = $obj->attachments(1)->attachment;
-	if (isset($attach->isImage) && $attach->isImage == 1) {
-		$thumb = $attach->url;
-	} else {
+	// 获取特点文章附件集合
+
+	foreach ($attach as $value) {
+		// 遍历附件集合
+		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == "cover.png") {
+			// 值不为空 | 是图片 | 符合名称
+			$thumb = $attach->url;
+			break;
+			// 赋值给 $thumb 然后跳出循环
+		}
+	}
+	if (isset($thumb) == false) {
+		// 如果 $thumb 为空（没有在附件列表中找到符合条件的文件）
 		$thumb = "https://blog.him.usla.cn/usr/themes/simple/img/404-Unfind.png";
+		// 将默认的 404 图片赋值给 $thumb
 	}
 	return $thumb;
 }
