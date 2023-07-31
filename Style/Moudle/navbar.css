@@ -32,7 +32,7 @@
 
 .navbar-title:hover {
     /* 导航栏左侧博客标题选中 */
-    color: var(--cardBackgroundColour);
+    color: var(--navbarNameFontColour);
     background: var(--primaryColour);
 }
 
@@ -73,6 +73,10 @@
 .change-theme-icon:hover {
     background: var(--cardBackgroundColour);
     transition: var(--transition);
+}
+
+.change-theme-icon path {
+    fill: var(--accentColour);
 }
 
 .navbar a:link {

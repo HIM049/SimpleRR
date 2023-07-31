@@ -24,8 +24,7 @@
 
 .tag-box {
     padding: 10px;
-    border-left: 5px solid #000;
-    transition: var(--transition);
+    border-left: 5px solid var(--fontColour);
 }
 
 .tag-box:hover {
