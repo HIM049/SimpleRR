@@ -12,7 +12,7 @@
 
 ## 修改封面图显示函数（更换 404 样式，修改默认封面图名称）
 - 进入主题根目录，并编辑 `functions.php` 。
-- 找到并修改（如下）
+- 找到并修改（如下注释）
 
 ``` php
 /**
@@ -20,21 +20,28 @@
  * 调用：<?php echo thumb($this); ?>
  */
 
-function thumb ($obj) {
+function thumb($obj)
+{	
+	$thumb = Helper::options()->themeUrl . '/Image/404Cover.png';
+	// 设置默认封面（404 页面）
+	$defaultCover = "cover.png";
+	// 设置自定义封面名称
+
 	$attach = $obj->attachments(1)->attachment;
+	if (isset($attach) == false) {
+		return $thumb;
+	}
 	foreach ($attach as $value) {
-		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == "cover.png") { // 封面图名称
+		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $defaultCover) {
 			$thumb = $attach->url;
 			break;
 		}
-	}
-	if (isset($thumb) == false) {
-		$thumb = "https://blog.him.usla.cn/usr/themes/simple/img/404-Unfind.png"; // 404 图片 URL
 	}
 	return $thumb;
 }
 ```
 
 ## TODO
-- [] 移动端折叠菜单
-- [] About 页面模板
+- 移动端折叠菜单
+- About 页面模板
+- 主题切换

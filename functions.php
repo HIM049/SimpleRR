@@ -33,23 +33,28 @@ function threadedComments($comments, $options)
  */
 
 function thumb($obj)
-{
+{	
+	$thumb = Helper::options()->themeUrl . '/Image/404Cover.png';
+	// 设置默认封面
+	$defaultCover = "cover.png";
+	// 设置自定义封面名称
+
 	$attach = $obj->attachments(1)->attachment;
-	// 获取特点文章附件集合
+	// 获取特定文章附件集合
+
+	if (isset($attach) == false) {
+		// 如文章没有附件便返回默认封面
+		return $thumb;
+	}
 
 	foreach ($attach as $value) {
 		// 遍历附件集合
-		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == "cover.png") {
-			// 值不为空 | 是图片 | 符合名称
+		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $defaultCover) {
+			// 如 ( 值不为空 | 是图片 | 符合名称 )
 			$thumb = $attach->url;
 			break;
-			// 赋值给 $thumb 然后跳出循环
+			// 赋值给 $thumb 后跳出循环
 		}
-	}
-	if (isset($thumb) == false) {
-		// 如果 $thumb 为空（没有在附件列表中找到符合条件的文件）
-		$thumb = "https://blog.him.usla.cn/usr/themes/simple/img/404-Unfind.png";
-		// 将默认的 404 图片赋值给 $thumb
 	}
 	return $thumb;
 }
