@@ -24,10 +24,10 @@
 
 .tag-box {
     padding: 10px;
-    border-left: 5px solid var(--fontColour);
+    border-left: var(--sidebarBorder);
 }
 
 .tag-box:hover {
-    border-left: 5px solid var(--primaryColour);
+    border-left: var(--sidebarBorderHover);
     padding-left: 15px;
 }

@@ -72,6 +72,7 @@
 .post-content blockquote {
     border-left: 5px solid var(--primaryColour);
     padding: 15px;
+    margin: 20px;
 }
 
 .post-content pre {
@@ -79,6 +80,25 @@
     margin: 20px;
     background: var(--cardAccentColour);
     border-radius: 10px;
+}
+
+.post-content table {
+    /* 表格样式 */
+    padding: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.post-content thead th {
+    /* 表格标题样式 */
+    background: var(--tableTitleColour);
+    padding: 10px 20px;
+}
+
+.post-content table tbody td {
+    /* 表格单元格样式 */
+    background: var(--tableUnitColour);
+    padding: 10px 20px;
 }
 
 

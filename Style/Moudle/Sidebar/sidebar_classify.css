@@ -20,12 +20,12 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    border-left: 5px solid var(--accentColour);
+    border-left: var(--sidebarBorder);
     background: var(--cardBackgroundColour);
 }
 
 .index-sidebar-classify-li:hover {
-    border-left: 5px solid var(--primaryColour);
+    border-left: var(--sidebarBorderHover);
     padding-left: 15px;
     /* background: linear-gradient(to right, var(--primaryColourPale), var(--cardBackgroundColour)); */
     /* 这是一个废弃的方案，采用主题色过渡到卡片色作为选中强调 */
