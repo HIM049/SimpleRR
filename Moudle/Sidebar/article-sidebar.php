@@ -12,6 +12,7 @@
             <h2>目录</h2>
         </div>
     </div>
+    <?php $this->need('./Moudle/Sidebar/scroll-to-top.php'); ?>
 </aside>
 
 <script src="<?php $this->options->themeUrl('./Javascript/article_index.js'); ?>"></script>

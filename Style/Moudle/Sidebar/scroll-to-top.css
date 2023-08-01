@@ -1,0 +1,33 @@
+.scroll-to-top {
+    /* 回到顶部按钮盒子 */
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+}
+
+.scroll-to-top a {
+    /* 回到顶部按钮主体 */
+    width: 100%;
+    background: var(--cardBackgroundColour);
+    border-radius: 10px;
+    display: flex;
+    box-shadow: var(--shandow);
+}
+
+.scroll-to-top a:hover {
+    cursor: pointer;
+}
+
+.scroll-to-top a svg {
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.scroll-to-top a svg path {
+    /* 按钮图标颜色 */
+    fill: var(--fontColour);
+}
+
+.scroll-to-top a:hover svg path {
+    fill: var(--primaryColour);
+}

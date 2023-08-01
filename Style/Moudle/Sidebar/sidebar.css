@@ -3,6 +3,7 @@
     position: fixed;
     right: 40px;
     top: 120px;
+    transition: none;
 }
 
 .sidebar-fix {

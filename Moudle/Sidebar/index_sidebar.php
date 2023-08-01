@@ -16,6 +16,7 @@
             <?php endwhile;}?>
         </div>
     </div> -->
+    <?php $this->need('./Moudle/Sidebar/scroll-to-top.php'); ?>
 </aside>
 
 <script src="<?php $this->options->themeUrl('./Javascript/sidebar.js'); ?>"></script>

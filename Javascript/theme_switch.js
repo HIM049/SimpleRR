@@ -1,17 +1,29 @@
 // TIPS: 此处匹配颜色使用了 switch 是因为考虑到可能的多主题需求。方便后续添加和修改。
 
-// 设置颜色设置到localStorage
+// 获取按钮元素
+toggleButton = document.getElementById('toggle-button');
+// 文档加载完成后检查保存的值
+document.addEventListener('DOMContentLoaded', checkTheme);
+// 监听按钮点击事件，触发函数切换
+toggleButton.addEventListener('click', toggleTheme);
+
+// 保存颜色设置
 function saveThemeSettings(color) {
     localStorage.setItem('themeSetting', color);
 }
 
-// 从localStorage获取颜色设置
+// 从获取颜色设置
 function getThemeSettings() {
     if (localStorage.getItem('themeSetting') == null) {
         saveThemeSettings("dark");
         return "light";
     }
     return localStorage.getItem('themeSetting');
+}
+
+// 切换到保存的颜色
+function checkTheme() {
+    setTo(getThemeSettings());
 }
 
 // 进行颜色切换
@@ -31,19 +43,7 @@ function setTo(theme) {
     }
 }
 
-
-// 文档加载完成后检查保存的值
-document.addEventListener('DOMContentLoaded', checkTheme);
-
-function checkTheme() {
-    setTo(getThemeSettings());
-}
-
-
 // 监听按钮点击事件，触发函数切换
-toggleButton = document.getElementById('toggle-button');
-toggleButton.addEventListener('click', toggleTheme);
-
 function toggleTheme() {
     choice = getThemeSettings();
     switch (choice) {
