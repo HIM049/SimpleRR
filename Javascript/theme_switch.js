@@ -15,8 +15,15 @@ function saveThemeSettings(color) {
 // 从获取颜色设置
 function getThemeSettings() {
     if (localStorage.getItem('themeSetting') == null) {
-        saveThemeSettings("dark");
-        return "light";
+        console.log("没有保存的值！使用浏览器主题")
+            // 检测是否支持 prefers-color-scheme 媒体查询
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // 用户当前使用的是深色主题
+            return "dark";
+        } else {
+            // 用户当前使用的是浅色主题
+            return "dark";
+        }
     }
     return localStorage.getItem('themeSetting');
 }
