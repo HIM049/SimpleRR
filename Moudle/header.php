@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html lang='zh-cn'>
 
-<link rel="icon" href="<?php $this->options->themeUrl('./Imagine/favicon.ico'); ?>"/>
+<link rel="icon" href="<?php $this->options->themeUrl('./Image/icon.png'); ?>"/>
 <title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
 
 <!-- CSS -->

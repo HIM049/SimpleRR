@@ -13,7 +13,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 ?>
 
 <!DOCTYPE html>
-<head>   
+<head>
     <?php $this->need('./Moudle/header.php'); ?>
     <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/Page/index.css'); ?>">
 </head>
