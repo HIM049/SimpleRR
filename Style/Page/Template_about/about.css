@@ -1,0 +1,18 @@
+.article-box {
+    max-width: 750px;
+    padding-right: 300px;
+}
+
+.article-body {
+    background: var(--cardBackgroundColour);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+}
+
+@media (max-width: 1030px) {
+    .article-box {
+        padding-right: 0;
+        margin: 0 auto;
+    }
+}

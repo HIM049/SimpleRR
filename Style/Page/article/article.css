@@ -1,0 +1,21 @@
+.article-TopImg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+}
+
+.article-body {
+    background: var(--cardBackgroundColour);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+}
+
+.article-title {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px;
+    text-align: center;
+}
