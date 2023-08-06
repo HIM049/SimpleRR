@@ -1,30 +1,38 @@
 <?php
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
-define('THE_TIME', '2021-10-05 00:00:00');
+function themeConfig($form)
+{
+	$setupTime = new \Typecho\Widget\Helper\Form\Element\Text(
+		'setupTime',
+        null,
+        null,
+		_t('建站时间')
+	);
+    $form->addInput($setupTime);
+    // $this->options->setupTime()
+
+    // $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
+    //     'sidebarBlock',
+    //     [
+    //         'ShowRecentPosts'    => _t('显示最新文章'),
+    //         'ShowRecentComments' => _t('显示最近回复'),
+    //         'ShowCategory'       => _t('显示分类'),
+    //         'ShowArchive'        => _t('显示归档'),
+    //         'ShowOther'          => _t('显示其它杂项')
+    //     ],
+    //     ['ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'],
+    //     _t('侧边栏显示')
+    // );
+
+    // $form->addInput($sidebarBlock->multiMode());
+}
 
 function art_count($cid)
 {
 	$db = Typecho_Db::get();
 	$rs = $db->fetchRow($db->select('table.contents.text')->from('table.contents')->where('table.contents.cid=?', $cid)->order('table.contents.cid', Typecho_Db::SORT_ASC)->limit(1));
 	echo mb_strlen($rs['text'], 'UTF-8');
-}
-/**
- * 重写评论显示函数
- */
-function threadedComments($comments, $options)
-{
-	$html = TeComment_Plugin::parseCommentHtml($comments, $options);
-
-	$children = '';
-	if ($comments->children) {
-		ob_start();
-		$comments->threadedComments();
-		$children = ob_get_contents();
-		ob_end_clean();
-	}
-	$html = str_replace('>{children}<', '>' . $children . '<', $html);
-	echo $html;
 }
 
 /**
@@ -65,15 +73,14 @@ function thumb($obj)
  */
 date_default_timezone_set('Asia/Shanghai');
 
-function getBuildTime()
+function getBuildTime($bulidTime)
 {
 	// 在下面按格式输入本站创建的时间
-	$site_create_time = strtotime(THE_TIME);
+	$site_create_time = strtotime($bulidTime);
 	$time = time() - $site_create_time;
 	if (is_numeric($time)) {
 		$value = array(
-			"years" => 0, "days" => 0, "hours" => 0,
-			"minutes" => 0, "seconds" => 0,
+			"years" => 0, "days" => 0,
 		);
 		if ($time >= 31556926) {
 			$value["years"] = floor($time / 31556926);
@@ -83,18 +90,9 @@ function getBuildTime()
 			$value["days"] = floor($time / 86400);
 			$time = ($time % 86400);
 		}
-		if ($time >= 3600) {
-			$value["hours"] = floor($time / 3600);
-			$time = ($time % 3600);
-		}
-		if ($time >= 60) {
-			$value["minutes"] = floor($time / 60);
-			$time = ($time % 60);
-		}
-		$value["seconds"] = floor($time);
 
-		echo '' . $value['years'] . 'Year 	 / ' . $value['days'] . 'Day ';
+		return '' . $value['years'] . 'Year 	 / ' . $value['days'] . 'Day ';
 	} else {
-		echo '';
+		return '';
 	}
 }

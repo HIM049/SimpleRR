@@ -11,10 +11,10 @@
         </div>
         <div class="footer-text-line2">
             <p>
-                <?php echo getBuildTime($this); ?> |
+                <?php echo getBuildTime($this->options->setupTime); ?> |
                 <a href="https://github.com/him049/simpleRR">About Theme</a> | 
                 Powered by <a href="https://typecho.org/">Typecho</a>
             </p>
         </div>
     </div>
-</footer>
+</footer>   
