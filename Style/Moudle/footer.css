@@ -1,11 +1,11 @@
 .footer {
-    background: var(--cardBackgroundColour);
+    /* background: var(--cardBackgroundColour); */
     margin-top: 20px;
     height: 100px;
     border-radius: 10px;
     display: flex;
     align-items: center;
-    box-shadow: var(--shandow);
+    /* box-shadow: var(--shandow); */
 }
 
 .footer-text {

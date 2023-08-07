@@ -43,8 +43,10 @@
 
 .page-navigator {
     /* 翻页导航栏 */
+    background: var(--cardBackgroundColour);
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 
 .page-navigator li {
@@ -61,7 +63,7 @@
 }
 
 .page-navigator li a:hover {
-    background: var(--cardBackgroundColour);
+    color: var(--primaryColour);
 }
 
 @media (max-width: 1030px) {
