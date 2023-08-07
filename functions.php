@@ -6,7 +6,7 @@ function themeConfig($form)
 	$setupTime = new \Typecho\Widget\Helper\Form\Element\Text(
 		'setupTime',
         null,
-        null,
+        '2021-10-05',
 		_t('建站时间'),
 		_t('日期格式：YEAR-MM-DD（例：2021-10-05）'),
 	);
