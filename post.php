@@ -10,8 +10,8 @@
     <?php $this->need('./Moudle/navbar.php'); ?>  
     <section class="article-box">
         <?php $this->need('./Moudle/article.php'); ?>  
+        <?php $this->need('./Moudle/comments.php'); ?>
         <?php $this->need('./Moudle/Sidebar/article-sidebar.php'); ?>
     </section>
-
     <?php $this->need('./Moudle/footer.php'); ?>
 </body>

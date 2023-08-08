@@ -1,0 +1,90 @@
+.comments {
+    /* 评论框 */
+    padding-top: 20px;
+}
+
+.comments a {
+    /* 评论框中 a 标签样式 */
+    text-decoration: underline dotted;
+}
+
+.comments a:hover {
+    /* 评论框中 a 标签样式 */
+    color: var(--primaryColour);
+}
+
+.respond {
+    /* 添加评论区域 */
+    background: var(--cardBackgroundColour);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+}
+
+.comment-form-information {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form div {
+    padding-bottom: 10px;
+}
+
+.comment-form input {
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid var(--accentColour);
+    border-radius: 10px;
+}
+
+.textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid var(--accentColour);
+    border-radius: 10px;
+}
+
+.submit {
+    /* 提交按钮样式 */
+    background: var(--accentColour);
+    color: var(--cardBackgroundColour);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.submit:hover {
+    background: var(--primaryColour);
+    box-shadow: 0 0 10px var(--primaryColour);
+}
+
+.comments-box {
+    background: var(--cardBackgroundColour);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+    margin-top: 20px;
+}
+
+.comment-list {
+    padding: 10px;
+}
+
+.comment-parent {
+    padding: 20px 0;
+    border-bottom: 1px solid;
+}
+
+.comment-content {
+    padding: 10px;
+}
+
+.comment-author span {
+    display: none;
+}
+
+.comment-author cite {
+    padding-bottom: 10px;
+    font-weight: 700;
+}
