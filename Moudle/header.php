@@ -12,6 +12,11 @@
 <!-- CSS -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/public.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/theme.css'); ?>">
+<style>
+    :root{
+        --primaryColour: <?php $this->options->primaryColour(); ?>
+    }
+</style>
 
 <!-- Javascript -->
 <script src="<?php $this->options->themeUrl('./Javascript/jquery-3.5.1.min.js'); ?>"></script>

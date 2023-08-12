@@ -10,8 +10,19 @@ function themeConfig($form)
 		_t('建站时间'),
 		_t('日期格式：YEAR-MM-DD（例：2021-10-05）'),
 	);
-    $form->addInput($setupTime);
+	
     // $this->options->setupTime()
+    $form->addInput($setupTime);
+
+	$primaryColour = new \Typecho\Widget\Helper\Form\Element\Text(
+		'primaryColour',
+        null,
+        '#00A7DB',
+		_t('网站主题色'),
+		_t('主题色用于顶导航栏、侧边栏、链接按钮等位置作点缀色')
+	);
+	
+    $form->addInput($primaryColour);
 
     // $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
     //     'sidebarBlock',
