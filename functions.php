@@ -2,7 +2,28 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 function themeConfig($form)
-{
+{	
+	// 网站主题色设置
+	$primaryColour = new \Typecho\Widget\Helper\Form\Element\Text(
+		'primaryColour',
+        null,
+        '#00A7DB',
+		_t('网站主题色'),
+		_t('主题色用于顶导航栏、侧边栏、链接按钮等位置作点缀色'),
+	);
+    $form->addInput($primaryColour);
+
+	// 导航栏首页位置字样
+	$navBarHome = new \Typecho\Widget\Helper\Form\Element\Text(
+		'navBarHome',
+        null,
+        '首页',
+		_t('“首页”按钮字样'),
+		_t('导航栏首页位置字样'),
+	);
+    $form->addInput($navBarHome);
+
+	// 设置建站时间（页脚） $this->options->setupTime()
 	$setupTime = new \Typecho\Widget\Helper\Form\Element\Text(
 		'setupTime',
         null,
@@ -10,19 +31,7 @@ function themeConfig($form)
 		_t('建站时间'),
 		_t('日期格式：YEAR-MM-DD（例：2021-10-05）'),
 	);
-	
-    // $this->options->setupTime()
     $form->addInput($setupTime);
-
-	$primaryColour = new \Typecho\Widget\Helper\Form\Element\Text(
-		'primaryColour',
-        null,
-        '#00A7DB',
-		_t('网站主题色'),
-		_t('主题色用于顶导航栏、侧边栏、链接按钮等位置作点缀色')
-	);
-	
-    $form->addInput($primaryColour);
 
     // $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
     //     'sidebarBlock',

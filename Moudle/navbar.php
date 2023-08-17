@@ -13,7 +13,7 @@
         </div>
         <div class="navbar-nav">
             <ul>
-                <li><a href="<?php $this->options->siteUrl(); ?>"><div class="navbar-nav-button">首页</div></a></li>
+                <li><a href="<?php $this->options->siteUrl(); ?>"><div class="navbar-nav-button"><?php $this->options->navBarHome() ?></div></a></li>
                 <?php $this->widget('Widget_Contents_Page_List') ->parse('<li><a href="{permalink}"><div class="navbar-nav-button">{title}</div></a></li>'); ?>
             </ul>
             <div class="change-theme">
