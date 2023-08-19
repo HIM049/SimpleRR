@@ -26,7 +26,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <a href="<?php $this->permalink() ?>">
                 <div class="article-box">
                     <div class="article-img-div">
-                        <img src="<?php echo thumb($this); ?>" />
+                        <img src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>" />
                     </div>
                     <h2><?php $this->title() ?></h2>
                     <!-- 文章预览部分（还是感觉太丑了） -->

@@ -22,6 +22,26 @@ function themeConfig($form)
 		_t('导航栏首页位置字样'),
 	);
     $form->addInput($navBarHome);
+	
+	// 封面图 404 URL 设置
+	$defaultCover = new \Typecho\Widget\Helper\Form\Element\Text(
+		'defaultCover',
+        null,
+        '/Image/404Cover.png',
+		_t('文章默认封面图'),
+		_t('设置文章默认 (404) 封面图'),
+	);
+    $form->addInput($defaultCover);
+
+	// 文章封面图名称设置
+	$coverName = new \Typecho\Widget\Helper\Form\Element\Text(
+		'coverName',
+		null,
+		'cover.png',
+		_t('文章封面图名称'),
+		_t('设置文章附件中检测封面图的名称'),
+	);
+	$form->addInput($coverName);
 
 	// 设置建站时间（页脚） $this->options->setupTime()
 	$setupTime = new \Typecho\Widget\Helper\Form\Element\Text(
@@ -61,28 +81,25 @@ function art_count($cid)
  * 调用：<?php echo thumb($this); ?>
  */
 
-function thumb($obj)
+function thumb($obj, $cover404, $coverName)
 {	
-	$thumb = Helper::options()->themeUrl . '/Image/404Cover.png';
 	// 设置默认封面
-	$defaultCover = "cover.png";
-	// 设置自定义封面名称
-
-	$attach = $obj->attachments(1)->attachment;
+	$thumb = Helper::options()->themeUrl . $cover404;
 	// 获取特定文章附件集合
+	$attach = $obj->attachments(1)->attachment;
 
+	// 如文章没有附件便返回默认封面
 	if (isset($attach) == false) {
-		// 如文章没有附件便返回默认封面
 		return $thumb;
 	}
 
+	// 遍历附件集合
 	foreach ($attach as $value) {
-		// 遍历附件集合
-		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $defaultCover) {
 			// 如 ( 值不为空 | 是图片 | 符合名称 )
+		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $coverName) {
+			// 赋值给 $thumb 后跳出循环
 			$thumb = $attach->url;
 			break;
-			// 赋值给 $thumb 后跳出循环
 		}
 	}
 	return $thumb;

@@ -14,6 +14,14 @@
 - 进入 “设置外观” 界面
 - 启用 SimpleRR
 - 在界面上部切换到 “设置外观” 选项卡
+**如主题更新后没有新设置项，可重载主题解决**
+
+### 已包含的设置项
+- 网站主题色
+- 导航栏“首页”按钮文字
+- 封面图默认（404）图片 URL 设置
+- 文章封面图检索名称设置
+- 页脚建站世界设置
 
 ## 为文章设置封面的方法
 - 准备一张封面图，图片格式为 PNG 。推荐分辨率为 710x284px （主题设计上封面图的最大大小）。
@@ -21,36 +29,6 @@
 - 将图片上传至文章的“附件”中。（无需将url写在页面上）
 - 发布文章，即可看到封面图。
 
-## 修改封面图显示函数（更换 404 样式，修改默认封面图名称）
-- 进入主题根目录，并编辑 `functions.php` 。
-- 找到并修改（如下注释）
-
-``` php
-/**
- * 文章封面图显示函数
- * 调用：<?php echo thumb($this); ?>
- */
-
-function thumb($obj)
-{	
-	$thumb = Helper::options()->themeUrl . '/Image/404Cover.png';
-	// 设置默认封面（404 页面）
-	$defaultCover = "cover.png";
-	// 设置自定义封面名称
-
-	$attach = $obj->attachments(1)->attachment;
-	if (isset($attach) == false) {
-		return $thumb;
-	}
-	foreach ($attach as $value) {
-		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $defaultCover) {
-			$thumb = $attach->url;
-			break;
-		}
-	}
-	return $thumb;
-}
-```
 
 ## TODO
 - 移动端折叠菜单

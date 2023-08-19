@@ -6,7 +6,7 @@
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> -->
 </head>
-<img class="article-TopImg" src="<?php echo thumb($this); ?>"/>
+<img class="article-TopImg" src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>"/>
 <div class="article-body">
     <h1 class="article-title"><?php $this->title() ?></h1>
     <div class="article-content">
