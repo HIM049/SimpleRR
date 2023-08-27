@@ -1,0 +1,35 @@
+/* 覆盖部分主题属性 */
+
+:root {
+    --cardAccentColour: #ADC6CE66;
+}
+
+[data-theme="dark"] {
+    --cardAccentColour: #222526a3;
+}
+
+.article-box {
+    /* 文章 div */
+    margin: 0 auto;
+}
+
+.post-content blockquote {
+    /* 引用框样式 */
+    background: var(--cardAccentColour);
+    border-left: none;
+    border-radius: 10px;
+}
+
+.post-content blockquote h2 {
+    padding: 10px 10px 0 10px;
+}
+
+.post-content a {
+    /* 链接样式 */
+    text-decoration: underline dotted;
+}
+
+.post-content a:hover {
+    /* 链接样式 */
+    color: var(--primaryColour);
+}
