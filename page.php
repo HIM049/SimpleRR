@@ -8,7 +8,7 @@
 
 <body class="body">
     <?php $this->need('./Moudle/navbar.php'); ?>  
-    <section class="article-box">
+    <section class="content-box article-box">
         <?php $this->need('./Moudle/article.php'); ?>  
         <?php $this->need('./Moudle/comments.php'); ?>
         <?php $this->need('./Moudle/Sidebar/article-sidebar.php'); ?>

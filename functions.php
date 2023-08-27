@@ -107,7 +107,7 @@ function thumb($obj, $cover404, $coverName)
 
 /**
  * blog运行时间
- * 调用：<?php echo getBuildTime($this); ?>
+ * 调用：<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>
  */
 date_default_timezone_set('Asia/Shanghai');
 

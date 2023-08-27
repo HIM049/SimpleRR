@@ -41,6 +41,10 @@ h2 {
     margin: auto;
 }
 
+.content-box {
+    max-width: 750px;
+}
+
 @media (max-width: 1030px) {
     .body {
         padding: 0 20px;

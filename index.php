@@ -21,7 +21,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <body class="body index-body">
     <?php $this->need('./Moudle/navbar.php'); ?>
 
-    <section class="article-list">
+    <section class="content-box article-list">
         <?php while ($this->next()) : ?>
             <a href="<?php $this->permalink() ?>">
                 <div class="article-box">

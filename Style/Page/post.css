@@ -1,6 +1,5 @@
 .article-box {
     padding-right: 300px;
-    max-width: 750px;
 }
 
 @media (max-width: 1030px) {
