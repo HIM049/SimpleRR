@@ -11,7 +11,7 @@
     /* 导航栏内部结构 */
     width: 100%;
     max-width: 800px;
-    margin: auto;
+    margin: 0 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -60,22 +60,20 @@
     transition: var(--transition);
 }
 
-.change-theme {
-    /* 导航栏主题切换按钮 */
-    padding-left: 20px;
-}
-
-.change-theme-icon {
+.svg-button {
+    /* 使用 svg 图标的按钮样式 */
     padding: 5px;
     border-radius: 10px;
 }
 
-.change-theme-icon:hover {
+.svg-button:hover {
+    /* 使用 svg 图标的按钮样式 */
     background: var(--cardBackgroundColour);
     transition: var(--transition);
 }
 
-.change-theme-icon path {
+.svg-button path {
+    /* svg 图标的颜色适应 */
     fill: var(--accentColour);
 }
 
@@ -85,4 +83,39 @@
 
 .navbar a:active {
     color: var(--fontColour);
+}
+
+.nav-menu-button a {
+    /* 导航栏“菜单”按钮 */
+    display: none;
+}
+
+.nav-list.unfold {
+    /* 展开状态下的导航栏菜单 */
+    background: var(--backgroundColour);
+    padding: 11px;
+    border-radius: 10px;
+    display: list-item;
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--cardBackgroundColour);
+}
+
+.nav-list.unfold .nav-button {
+    /* 展开状态下的导航栏标签 */
+    display: revert;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+    .nav-button {
+        /* 导航栏按钮 */
+        display: none;
+    }
+    .nav-menu-button a {
+        /* 导航栏“菜单”按钮 */
+        display: revert;
+    }
 }
