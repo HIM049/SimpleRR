@@ -1,9 +1,15 @@
 .sidebar {
     width: 280px;
-    position: fixed;
-    right: 40px;
-    top: 120px;
+    height: 100%;
+    right: 0;
+    top: 0px;
     transition: none;
+    position: absolute;
+}
+
+.sidebar .sidebar-box {
+    position: sticky;
+    top: 20px;
 }
 
 .sidebar-fix {

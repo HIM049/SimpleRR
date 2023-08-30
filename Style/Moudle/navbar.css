@@ -11,7 +11,7 @@
     /* 导航栏内部结构 */
     width: 100%;
     max-width: 800px;
-    margin: 0 30px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
@@ -101,6 +101,7 @@
     right: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     border: 2px solid var(--cardBackgroundColour);
+    z-index: 1;
 }
 
 .nav-list.unfold .nav-button {
@@ -110,6 +111,10 @@
 }
 
 @media (max-width: 700px) {
+    .navbar-box {
+        /* 导航栏内部结构 */
+        margin: 0 30px;
+    }
     .nav-button {
         /* 导航栏按钮 */
         display: none;

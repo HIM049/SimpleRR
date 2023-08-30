@@ -6,14 +6,15 @@
 </head>
 
 <aside class="sidebar article-sidebar" id="Sidebar">
-    <?php $this->need('./Moudle/Sidebar/sidebar-classify.php'); ?>
-    <div class="article-sidebar-box">
-        <div class="article-sidebar-index" id="sidebarArticleIndex">
-            <h2>目录</h2>
+    <div class="sidebar-box">
+        <?php $this->need('./Moudle/Sidebar/sidebar-classify.php'); ?>
+        <div class="article-sidebar-box">
+            <div class="article-sidebar-index" id="sidebarArticleIndex">
+                <h2>目录</h2>
+            </div>
         </div>
+        <?php $this->need('./Moudle/Sidebar/scroll-to-top.php'); ?>
     </div>
-    <?php $this->need('./Moudle/Sidebar/scroll-to-top.php'); ?>
 </aside>
 
 <script src="<?php $this->options->themeUrl('./Javascript/article_index.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('./Javascript/sidebar.js'); ?>"></script>

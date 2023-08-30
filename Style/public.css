@@ -43,6 +43,7 @@ h2 {
 
 .content-box {
     max-width: 750px;
+    position: relative;
 }
 
 @media (max-width: 1030px) {
