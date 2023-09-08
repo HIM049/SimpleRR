@@ -9,7 +9,7 @@ function themeConfig($form)
         null,
         '#00A7DB',
 		_t('网站主题色'),
-		_t('主题色用于顶导航栏、侧边栏、链接按钮等位置作点缀色'),
+		_t('主题色用于顶导航栏、侧边栏、链接按钮等位置作点缀色')
 	);
     $form->addInput($primaryColour);
 
@@ -19,7 +19,7 @@ function themeConfig($form)
         null,
         '首页',
 		_t('“首页”按钮字样'),
-		_t('导航栏首页位置字样'),
+		_t('导航栏首页位置字样')
 	);
     $form->addInput($navBarHome);
 	
@@ -29,7 +29,7 @@ function themeConfig($form)
         null,
         '/Image/404Cover.png',
 		_t('文章默认封面图'),
-		_t('设置文章默认 (404) 封面图'),
+		_t('设置文章默认 (404) 封面图')
 	);
     $form->addInput($defaultCover);
 
@@ -39,7 +39,7 @@ function themeConfig($form)
 		null,
 		'cover.png',
 		_t('文章封面图名称'),
-		_t('设置文章附件中检测封面图的名称'),
+		_t('设置文章附件中检测封面图的名称')
 	);
 	$form->addInput($coverName);
 
@@ -49,7 +49,7 @@ function themeConfig($form)
         null,
         '2021-10-05',
 		_t('建站时间'),
-		_t('日期格式：YEAR-MM-DD（例：2021-10-05）'),
+		_t('日期格式：YEAR-MM-DD（例：2021-10-05）')
 	);
     $form->addInput($setupTime);
 
