@@ -82,6 +82,7 @@
     margin: 20px;
     background: var(--cardAccentColour);
     border-radius: 10px;
+    overflow: auto;
 }
 
 .post-content table {
