@@ -103,3 +103,7 @@
     font-weight: 700;
     text-decoration: none;
 }
+
+.comment-content p {
+	padding: 10px;
+}
