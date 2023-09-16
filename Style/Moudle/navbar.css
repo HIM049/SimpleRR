@@ -109,7 +109,14 @@
     display: revert;
     padding: 20px;
 }
-
+@media (max-width: 1030px) {
+    .navbar-box {
+        /* 导航栏内部结构 */    
+        margin: 0 auto;
+        max-width: 690px;
+        padding: 30px;
+    }
+}
 @media (max-width: 700px) {
     .navbar-box {
         /* 导航栏内部结构 */
