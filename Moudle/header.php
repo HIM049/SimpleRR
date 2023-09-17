@@ -12,6 +12,8 @@
 <!-- CSS -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/public.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/theme.css'); ?>">
+<link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/shared-style.css'); ?>">
+
 <style>
     :root{
         --primaryColour: <?php $this->options->primaryColour(); ?>

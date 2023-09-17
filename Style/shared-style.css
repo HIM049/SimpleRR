@@ -1,0 +1,7 @@
+.shandow {
+    box-shadow: var(--shandow);
+}
+
+.transition {
+    transition: 0.5s;
+}
