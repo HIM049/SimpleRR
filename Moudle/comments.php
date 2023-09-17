@@ -11,8 +11,8 @@
                 <?php $comments->cancelReply(); ?>
             </div>
 
-            <h2 id="response">添加新评论</h2>
-            <form class="comment-form" method="post" action="<?php $this->commentUrl() ?>" id="comment-form" role="form">
+            <a id="switchCommentsButton" class="switch-comment-button" href="javascript:void(0);" onclick="switchDisplay()"><div id="button-div" class="button-div"><h2>添加新评论</h2></div></a>
+            <form class="comment-form" method="post" action="<?php $this->commentUrl() ?>" id="commentForm" role="form">
                 <?php if ($this->user->hasLogin()): ?>
                     <p>已登录的身份<a
                             href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a
@@ -56,3 +56,5 @@
 
 
 </div>
+
+<script src="<?php $this->options->themeUrl('./Javascript/comments.js'); ?>"></script>

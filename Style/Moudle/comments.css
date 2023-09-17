@@ -21,6 +21,14 @@
     box-shadow: var(--shandow);
 }
 
+.comment-form {
+    display: none;
+}
+
+.comment-form.unfold {
+    display: unset;
+}
+
 .comment-form-information {
     display: flex;
     flex-direction: column;
@@ -36,6 +44,38 @@
     max-width: 350px;
     border: 1px solid var(--accentColour);
     border-radius: 10px;
+}
+.comments .respond a {
+    /* 添加评论标题 */
+    text-decoration: unset;
+}
+
+/* .switch-comment-button {
+    font-size: 18px;
+    padding-bottom: 0;
+} */
+
+.switch-comment-button .button-div {
+    /* 按钮 div 样式*/
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.switch-comment-button .button-div:hover {
+    /* 按钮 div 选中样式*/
+    background: var(--buttonAccentColour);
+    border: 1px solid var(--buttonBorderColour);
+}
+
+.switch-comment-button .button-div h2 {
+    /* 取消标题下边距 */
+    padding: 0;
+}
+
+.switch-comment-button.unfold .button-div {
+    /* 展开后取消边框 */
+    border: unset;
 }
 
 .textarea {
@@ -55,6 +95,7 @@
 }
 
 .submit:hover {
+    /* 提交按钮选中样式 */
     background: var(--primaryColour);
     box-shadow: 0 0 10px var(--primaryColour);
 }

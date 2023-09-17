@@ -9,6 +9,8 @@
     --primaryColourPale: #00a8db12;
     --tableTitleColour: #acacac;
     --tableUnitColour: #ccc;
+    --buttonAccentColour: #e8e8e8;
+    --buttonBorderColour: #bfbfbf;
     --transition: 0.5s;
     --shandow: 0 10px 10px rgba(0, 0, 0, 0.06);
     --sidebarBorder: 3px solid var(--accentColour);
@@ -25,5 +27,7 @@
     --primaryColourPale: #00a8db12;
     --tableTitleColour: #000;
     --tableUnitColour: #1c1c1c;
+    --buttonAccentColour: #3c3c3c;
+    --buttonBorderColour: #646464;
     --shandow: 0 10px 10px rgba(50, 50, 50, 0.5);
 }
