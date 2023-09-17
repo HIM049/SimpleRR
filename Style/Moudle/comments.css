@@ -34,17 +34,6 @@
     flex-direction: column;
 }
 
-.comment-form div {
-    padding-bottom: 10px;
-}
-
-.comment-form input {
-    padding: 10px;
-    width: 100%;
-    max-width: 350px;
-    border: 1px solid var(--accentColour);
-    border-radius: 10px;
-}
 .comments .respond a {
     /* 添加评论标题 */
     text-decoration: unset;
@@ -78,7 +67,22 @@
     border: unset;
 }
 
+.comment-form div {
+    padding-bottom: 10px;
+}
+
+.comment-form input {
+    /* 信息输入框样式 */
+    background: var(--cardAccentColour);
+    padding: 10px;
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid var(--accentColour);
+    border-radius: 10px;
+}
 .textarea {
+    /* 评论信息框 */
+    background: var(--cardAccentColour);
     width: calc(100% - 20px);
     padding: 10px;
     border: 1px solid var(--accentColour);
