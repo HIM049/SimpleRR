@@ -30,5 +30,5 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             </div>
         </div>
     </section>
-    
+    <?php $this->need('./Moudle/footer.php'); ?>
 </body>

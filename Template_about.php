@@ -18,8 +18,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
 <body class="body">
     <?php $this->need('./Moudle/navbar.php'); ?>
-    <section class="article-box">
+    <section class="article-box content-box">
         <?php $this->need('./Moudle/article.php'); ?>  
     </section>
-    
+    <?php $this->need('./Moudle/footer.php'); ?>
 </body>
