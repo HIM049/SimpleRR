@@ -5,3 +5,27 @@
 .transition {
     transition: 0.5s;
 }
+
+.bottom-margin {
+    margin-bottom: 20px;
+}
+
+.card {
+    /* 卡片基础样式 */
+    background: var(--cardBackgroundColour);
+    border-radius: 10px;
+    box-shadow: var(--shandow);
+    padding: 20px;
+}
+
+.card.button {
+    /* 卡片式按钮样式 */
+    border: 2px solid var(--accentColour);
+    padding: 0;
+}
+
+.card.button:hover {
+    /* 卡片式按钮选中样式 */
+    background: var(--buttonAccentColour);
+    border: 2px solid var(--buttonBorderColour);
+}

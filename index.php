@@ -24,7 +24,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <section class="content-box article-list">
         <?php while ($this->next()) : ?>
             <a href="<?php $this->permalink() ?>">
-                <div class="article-box">
+                <div class="article-box card">
                     <div class="article-img-div">
                         <img src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>" />
                     </div>

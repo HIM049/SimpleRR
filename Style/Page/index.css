@@ -11,11 +11,7 @@
 
 .article-box {
     /* 单个文章盒子 */
-    background: var(--cardBackgroundColour);
-    border-radius: 10px;
-    padding: 20px;
     margin-bottom: 20px;
-    box-shadow: var(--shandow);
 }
 
 .article-date {

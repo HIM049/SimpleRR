@@ -6,13 +6,6 @@
     box-shadow: var(--shandow);
 }
 
-.article-body {
-    background: var(--cardBackgroundColour);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--shandow);
-}
-
 .article-title {
     font-size: 20px;
     font-weight: 800;

@@ -1,17 +1,12 @@
 .scroll-to-top {
     /* 回到顶部按钮盒子 */
-    width: 100%;
-    padding-top: 20px;
     display: flex;
 }
 
 .scroll-to-top a {
     /* 回到顶部按钮主体 */
     width: 100%;
-    background: var(--cardBackgroundColour);
-    border-radius: 10px;
     display: flex;
-    box-shadow: var(--shandow);
 }
 
 .scroll-to-top a:hover {
