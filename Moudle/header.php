@@ -7,7 +7,7 @@
 <html lang='zh-cn'>
 
 <link rel="icon" href="<?php $this->options->themeUrl('./Image/icon.png'); ?>"/>
-<title><?php $this->options->title(); ?><?php $this->archiveTitle(); ?></title>
+<title><?php $this->archiveTitle('','',' - '); ?><?php $this->options->title(); ?></title>
 
 <!-- CSS -->
 <link rel="stylesheet" href="<?php $this->options->themeUrl('./Style/public.css'); ?>">

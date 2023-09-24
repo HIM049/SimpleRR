@@ -5,7 +5,7 @@
  * 
  * @package SimpleRR 
  * @author HIM049
- * @version 1.4.1
+ * @version 1.4.2
  * @link https://blog.him.usla.cn
  */
 

@@ -6,6 +6,16 @@
     font-size: 15px;
 }
 
+.post-content a {
+    color: var(--primaryColour);
+    text-decoration: underline dotted;
+}
+
+.post-content a:hover {
+    color: var(--cardAccentColour);
+    text-decoration: underline auto;
+}
+
 .post-content h1 {
     /* h1 样式 */
     font-size: 20px;
