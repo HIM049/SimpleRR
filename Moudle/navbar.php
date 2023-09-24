@@ -15,7 +15,7 @@
             <!-- 导航项 -->
             <ul class="nav-list">
                 <!-- “首页”按钮 -->
-                <li class="nav-button"><a href="<?php $this->options->siteUrl(); ?>"><div class="navbar-nav-button"><?php $this->options->navBarHome() ?></div></a></li>
+                <li class="nav-button"><a href="<?php $this->options->siteUrl(); ?>"><div class="navbar-nav-button"><?php $this->options->navBarHome(); ?></div></a></li>
                 <!-- 导航栏标签 -->
                 <?php $this->widget('Widget_Contents_Page_List') ->parse('<li class="nav-button"><a href="{permalink}"><div class="navbar-nav-button">{title}</div></a></li>'); ?>
                 <!-- 主题切换按钮 -->

@@ -1,0 +1,14 @@
+.content-box {
+    margin: 120px auto;
+}
+
+.img-box {
+    width: 350px;
+    margin: 0 auto;
+}
+
+.content-box .text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+}

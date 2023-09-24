@@ -10,6 +10,11 @@
     margin-bottom: 20px;
 }
 
+.content-box {
+    max-width: 750px;
+    position: relative;
+}
+
 .card {
     /* 卡片基础样式 */
     background: var(--cardBackgroundColour);

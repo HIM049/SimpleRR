@@ -53,6 +53,15 @@ function themeConfig($form)
 	);
     $form->addInput($setupTime);
 
+	// 设置 404 页面显示字样
+	$pageText = new \Typecho\Widget\Helper\Form\Element\Text(
+		'pageText',
+		null,
+		'Oops! 文章不见了',
+		_t('404 页面字样')
+	);
+	$form->addInput($pageText);
+
 	// 评论设置
     $commentsBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
         'commentsBlock',
