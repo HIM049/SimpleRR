@@ -29,3 +29,33 @@
     background: var(--buttonAccentColour);
     border: 2px solid var(--buttonBorderColour);
 }
+
+.button.t1 {
+    background: var(--buttonAccentColour);
+    padding: 10px;
+    border: 2px solid var(--buttonBorderColour);
+    border-radius: 10px;
+}
+
+.button.t1:hover {
+    background: var(--accentColour);
+    color: var(--tableTitleColour);
+    border: 2px solid var(--accentColour);
+}
+
+.button.t1:active {
+    background: var(--primaryColour);
+    color: var(--navbarNameFontColour);
+    border: 2px solid var(--primaryColour);
+    box-shadow: 0 0 10px var(--primaryColour);
+    transition: none;
+}
+
+.svg-icon path {
+    /* svg 图标的颜色适应 */
+    fill: var(--accentColour);
+}
+
+.text.red {
+    color: #fa0000af;
+}

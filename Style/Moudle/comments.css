@@ -1,154 +1,95 @@
-.comments {
-    /* 评论框 */
-    padding-top: 20px;
+.comments-box a {
+	color: var(--primaryColour);
+	text-decoration: underline dotted;
 }
 
-.comments a {
-    /* 评论框中 a 标签样式 */
-    text-decoration: underline dotted;
+.comments-box .title {
+	font-size: 20px;
+	font-weight: 700;
+	padding: 10px 20px;
 }
 
-.comments a:hover {
-    /* 评论框中 a 标签样式 */
-    color: var(--primaryColour);
-}
-
-.respond {
-    /* 添加评论区域 */
-    background: var(--cardBackgroundColour);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: var(--shandow);
-}
-
-.comment-form {
-    display: none;
-}
-
-.comment-form.unfold {
-    display: unset;
-}
-
-.comment-form-information {
-    display: flex;
-    flex-direction: column;
-}
-
-.comments .respond a {
-    /* 添加评论标题 */
-    text-decoration: unset;
-}
-
-/* .switch-comment-button {
-    font-size: 18px;
-    padding-bottom: 0;
-} */
-
-.switch-comment-button .button-div {
-    /* 按钮 div 样式*/
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid;
-}
-
-.switch-comment-button .button-div:hover {
-    /* 按钮 div 选中样式*/
-    background: var(--buttonAccentColour);
-    border: 1px solid var(--buttonBorderColour);
-}
-
-.switch-comment-button .button-div h2 {
-    /* 取消标题下边距 */
-    padding: 0;
-}
-
-.switch-comment-button.unfold .button-div {
-    /* 展开后取消边框 */
-    border: unset;
-}
-
-.comment-form div {
-    padding-bottom: 10px;
-}
-
-.comment-form input {
-    /* 信息输入框样式 */
-    background: var(--cardAccentColour);
-    padding: 10px;
-    width: 100%;
-    max-width: 350px;
-    border: 1px solid var(--accentColour);
-    border-radius: 10px;
-}
-.textarea {
-    /* 评论信息框 */
-    background: var(--cardAccentColour);
-    width: calc(100% - 20px);
-    padding: 10px;
-    border: 1px solid var(--accentColour);
-    border-radius: 10px;
-}
-
-.submit {
-    /* 提交按钮样式 */
-    background: var(--accentColour);
-    color: var(--cardBackgroundColour);
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-}
-
-.submit:hover {
-    /* 提交按钮选中样式 */
-    background: var(--primaryColour);
-    box-shadow: 0 0 10px var(--primaryColour);
-}
-
-.comments-box {
-    background: var(--cardBackgroundColour);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: var(--shandow);
-    margin-top: 20px;
-}
-
-.comment-list {
-    padding: 10px;
-}
-
-.comment-parent {
-    padding: 20px 0;
-    border-bottom: 1px solid;
-}
-
-.comment-content {
-    padding: 10px;
-}
-
-.comment-author {
-    display: flex;
-    padding: 0 10px;
-}
-
-.comment-author span {
-    padding-right: 10px;
-}
-
-.comment-author span img {
-    border-radius: 50%;
-}
-
-.comment-meta {
-    padding: 0 10px;
-}
-
-.comment-author cite a {
-    padding-bottom: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.comment-content p {
+.comments-box .input {
+	background: var(--buttonAccentColour);
 	padding: 10px;
+	border: 2px solid var(--buttonBorderColour);
+	border-radius: 10px;
+}
+
+.comments-box .input:hover {
+	border: 2px solid var(--accentColour);
+}
+
+.comments-box .input:focus {
+	background: var(--cardAccentColour);
+	border: 2px solid var(--accentColour);
+}
+
+.comments-box .user-inf {
+	/* 添加评论部分 用户信息输入框 */
+	margin-bottom: 10px;
+}
+
+.comments-box .input-content {
+	/* 添加评论部分 评论内容输入框 */
+	width: calc(100% - 25px);
+	margin-bottom: 10px;
+}
+
+.comments-box .has-login {
+	/* 添加评论部分 已登录提示 */
+	display: flex;
+	padding: 0 10px;
+}
+
+.comments-box .comments.card .count {
+	/* 评论列表部分 评论数量字段 */
+	padding: 0px 20px 20px 20px;
+}
+
+.comment-body {
+	border-bottom: 2px solid;
+	margin-bottom: 20px;
+	padding: 0 0 20px 10px;
+}
+
+.comment-children .comment-body {
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.comment-children {
+	margin: 20px 20px 0 20px;
+}
+
+.comments-box .comment-body .comment-meta {
+	margin-bottom: 10px;
+}
+
+.comments-box .comment-body .content {
+	margin: 0 20px;
+}
+
+.comments-box .comment-meta .comment-author .svg-icon {
+	padding-right: 10px;
+}
+
+.comments-box .comment-meta .comment-author .fn, 
+.comments-box .comment-meta .comment-author a {
+	/* 评论列表部分 用户昵称 */
+	font-size: 18px;
+	font-weight: 800;
+	color: var(--fontColour);
+	text-decoration: none;
+}
+
+.comments-box .comment-meta .comment-author {
+	display: flex;
+	text-align: center;
+	line-height: 35px;
+}
+
+.comments-box .content p {
+	padding-bottom: 20px;
 }

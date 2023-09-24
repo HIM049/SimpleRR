@@ -53,20 +53,17 @@ function themeConfig($form)
 	);
     $form->addInput($setupTime);
 
-    // $sidebarBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
-    //     'sidebarBlock',
-    //     [
-    //         'ShowRecentPosts'    => _t('显示最新文章'),
-    //         'ShowRecentComments' => _t('显示最近回复'),
-    //         'ShowCategory'       => _t('显示分类'),
-    //         'ShowArchive'        => _t('显示归档'),
-    //         'ShowOther'          => _t('显示其它杂项')
-    //     ],
-    //     ['ShowRecentPosts', 'ShowRecentComments', 'ShowCategory', 'ShowArchive', 'ShowOther'],
-    //     _t('侧边栏显示')
-    // );
+	// 评论设置
+    $commentsBlock = new \Typecho\Widget\Helper\Form\Element\Checkbox(
+        'commentsBlock',
+        [
+            'ShowCommentsState'    => _t('显示“评论已关闭”提示')
+        ],
+        ['ShowCommentsState'],
+        _t('评论设置')
+    );
 
-    // $form->addInput($sidebarBlock->multiMode());
+    $form->addInput($commentsBlock->multiMode());
 }
 
 function art_count($cid)

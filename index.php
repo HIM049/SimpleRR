@@ -5,7 +5,7 @@
  * 
  * @package SimpleRR 
  * @author HIM049
- * @version 1.0
+ * @version 1.3.0
  * @link https://blog.him.usla.cn
  */
 
@@ -37,7 +37,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                 </div>
             </a>
         <?php endwhile; ?>
-        <div class="article-list-nav"><?php $this->pageNav(); ?></div><!-- 翻页按键 -->
+        <div class="article-list-nav card"><?php $this->pageNav(); ?></div><!-- 翻页按键 -->
         <?php $this->need('./Moudle/Sidebar/index_sidebar.php'); ?>
     </section>
     <?php $this->need('./Moudle/footer.php'); ?>
