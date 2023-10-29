@@ -33,7 +33,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <!-- <div class="article">
                         <p><?php $this->excerpt(150, '...');?></p>
                     </div> -->
-                    <p class="article-date"><?php $this->date('Y-m-d'); ?></p>
+                    <p class="article-date"><?php $this->category(' '); ?> | <?php $this->date('Y-m-d'); ?></p>
                 </div>
             </a>
         <?php endwhile; ?>
