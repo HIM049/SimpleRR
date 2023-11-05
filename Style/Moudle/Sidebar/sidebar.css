@@ -16,6 +16,12 @@
     top: 20px;
 }
 
+.sidebar h2 {
+    /* 侧边栏卡片标题 */
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
 @media (max-width: 1030px) {
     .sidebar {
         position: unset;

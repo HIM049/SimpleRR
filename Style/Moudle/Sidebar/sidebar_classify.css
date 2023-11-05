@@ -3,12 +3,6 @@
     padding: 10px;
 }
 
-.index-sidebar-classify h2 {
-    /* 侧边栏分类标题 */
-    font-size: 18px;
-    padding-bottom: 10px;
-}
-
 .index-sidebar-classify-li {
     display: flex;
     justify-content: space-between;
