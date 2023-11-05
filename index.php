@@ -5,7 +5,7 @@
  * 
  * @package SimpleRR 
  * @author HIM049
- * @version 1.8.0
+ * @version 1.8.1
  * @link https://blog.him.usla.cn
  */
 
@@ -31,15 +31,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
                     <h2><?php $this->title() ?></h2>
                     <div class="article">
                         <p>
+                            <!-- 简介部分 -->
                             <?php 
                                 if($this->fields->intro) {
                                     $this->fields->intro();
                                 }
                             ?>
                         </p>
-
-                        <!-- 文章预览部分（还是感觉太丑了） -->
-                        <!-- <p><?php $this->excerpt(150, '...');?></p> -->
                     </div>
                     <p class="article-date"><?php $this->category(' '); ?> | <?php $this->date('Y-m-d'); ?></p>
                 </div>
