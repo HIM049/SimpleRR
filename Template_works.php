@@ -22,7 +22,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 <body class="body">
     <?php $this->need('./Moudle/navbar.php'); ?>
     <section class="content-box article-box">
-        <img class="article-TopImg" src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>"/>
+        <img class="article-TopImg" src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName, in_array('displayCover', $this->options->useDefaultCover)); ?>"/>
         <div class="card">
             <!-- <h1 class="article-title"><?php $this->title() ?></h1> -->
             <div class="article-content">

@@ -23,12 +23,23 @@ function themeConfig($form)
 	);
     $form->addInput($navBarHome);
 	
+	// 是否显示 404 封面图设置
+	$useDefaultCover = new \Typecho\Widget\Helper\Form\Element\Checkbox(
+		'useDefaultCover',
+		[
+			'displayCover'    => _t('未检测到封面时使用文章默认封面图')
+		],
+		['displayCover'],
+		_t('文章默封面图设置')
+	);
+    $form->addInput($useDefaultCover->multiMode());
+
 	// 封面图 404 URL 设置
 	$defaultCover = new \Typecho\Widget\Helper\Form\Element\Text(
 		'defaultCover',
         null,
         '/Image/404Cover.png',
-		_t('文章默认封面图'),
+		_t(''),
 		_t('设置文章默认 (404) 封面图')
 	);
     $form->addInput($defaultCover);
@@ -38,8 +49,8 @@ function themeConfig($form)
 		'coverName',
 		null,
 		'cover.png',
-		_t('文章封面图名称'),
-		_t('设置文章附件中检测封面图的名称')
+		_t(''),
+		_t('设置文章附件中检测的封面图名称')
 	);
 	$form->addInput($coverName);
 
@@ -75,19 +86,22 @@ function themeConfig($form)
     $form->addInput($commentsBlock->multiMode());
 }
 
-function art_count($cid)
-{
-	$db = Typecho_Db::get();
-	$rs = $db->fetchRow($db->select('table.contents.text')->from('table.contents')->where('table.contents.cid=?', $cid)->order('table.contents.cid', Typecho_Db::SORT_ASC)->limit(1));
-	echo mb_strlen($rs['text'], 'UTF-8');
-}
+/**
+ * 文章访问计数？
+ */
+// function art_count($cid)
+// {
+// 	$db = Typecho_Db::get();
+// 	$rs = $db->fetchRow($db->select('table.contents.text')->from('table.contents')->where('table.contents.cid=?', $cid)->order('table.contents.cid', Typecho_Db::SORT_ASC)->limit(1));
+// 	echo mb_strlen($rs['text'], 'UTF-8');
+// }
 
 /**
  * 文章封面图显示函数
  * 调用：<?php echo thumb($this); ?>
  */
 
-function thumb($obj, $cover404, $coverName)
+function thumb($obj, $cover404, $coverName, $useDefaultCover)
 {	
 	// 设置默认封面
 	$thumb = Helper::options()->themeUrl . $cover404;
@@ -96,7 +110,12 @@ function thumb($obj, $cover404, $coverName)
 
 	// 如文章没有附件便返回默认封面
 	if (isset($attach) == false) {
-		return $thumb;
+		// 是否需要默认封面
+		if ($useDefaultCover == 1) {
+			return $thumb;
+		} else {
+			return "";
+		}
 	}
 
 	// 遍历附件集合

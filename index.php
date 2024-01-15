@@ -26,7 +26,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
             <a href="<?php $this->permalink() ?>">
                 <div class="article-box card">
                     <div class="article-img-div">
-                        <img src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>" />
+                        <img src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName, in_array('displayCover', $this->options->useDefaultCover)); ?>" />
                     </div>
                     <h2><?php $this->title() ?></h2>
                     <div class="article">
