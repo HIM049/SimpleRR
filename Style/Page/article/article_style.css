@@ -95,6 +95,14 @@
     overflow: auto;
 }
 
+.post-content p code {
+    padding: 2px;
+    margin: 2px;
+    background: var(--cardAccentColour);
+    border-radius: 3px;
+    color: #ff1111bd;
+}
+
 .post-content table {
     /* 表格样式 */
     padding: 20px;
