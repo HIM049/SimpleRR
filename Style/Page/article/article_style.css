@@ -1,5 +1,9 @@
 /* 文章显示样式 */
 
+.post-content {
+    line-height: 26px;
+}
+
 .post-content p {
     /* p 标签样式 */
     padding: 15px;
@@ -72,6 +76,11 @@
 .post-content li {
     /* 列表样式 */
     list-style: disc;
+    margin-bottom: 10px;
+}
+
+.post-content li p {
+	padding: 0;
 }
 
 .post-content img {
@@ -93,6 +102,14 @@
     background: var(--cardAccentColour);
     border-radius: 10px;
     overflow: auto;
+}
+
+.post-content p code {
+    padding: 2px;
+    margin: 2px;
+    background: var(--cardAccentColour);
+    border-radius: 3px;
+    color: #ff1111bd;
 }
 
 .post-content table {
