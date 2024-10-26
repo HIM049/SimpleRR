@@ -44,16 +44,6 @@ function themeConfig($form)
 	);
     $form->addInput($defaultCover);
 
-	// 文章封面图名称设置
-	$coverName = new \Typecho\Widget\Helper\Form\Element\Text(
-		'coverName',
-		null,
-		'cover.png',
-		_t(''),
-		_t('设置文章附件中检测的封面图名称')
-	);
-	$form->addInput($coverName);
-
 	// 设置建站时间（页脚） $this->options->setupTime()
 	$setupTime = new \Typecho\Widget\Helper\Form\Element\Text(
 		'setupTime',
@@ -87,52 +77,8 @@ function themeConfig($form)
 }
 
 /**
- * 文章访问计数？
- */
-// function art_count($cid)
-// {
-// 	$db = Typecho_Db::get();
-// 	$rs = $db->fetchRow($db->select('table.contents.text')->from('table.contents')->where('table.contents.cid=?', $cid)->order('table.contents.cid', Typecho_Db::SORT_ASC)->limit(1));
-// 	echo mb_strlen($rs['text'], 'UTF-8');
-// }
-
-/**
- * 文章封面图显示函数
- * 调用：<?php echo thumb($this); ?>
- */
-
-function thumb($obj, $cover404, $coverName, $useDefaultCover)
-{	
-	// 设置默认封面
-	$thumb = Helper::options()->themeUrl . $cover404;
-	// 获取特定文章附件集合
-	$attach = $obj->attachments(1)->attachment;
-
-	// 如文章没有附件便返回默认封面
-	if (isset($attach) == false) {
-		// 是否需要默认封面
-		if ($useDefaultCover == 1) {
-			return $thumb;
-		} else {
-			return "";
-		}
-	}
-
-	// 遍历附件集合
-	foreach ($attach as $value) {
-			// 如 ( 值不为空 | 是图片 | 符合名称 )
-		if (isset($attach->isImage) && $attach->isImage == 1 && $attach->name == $coverName) {
-			// 赋值给 $thumb 后跳出循环
-			$thumb = $attach->url;
-			break;
-		}
-	}
-	return $thumb;
-}
-
-/**
  * blog运行时间
- * 调用：<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName); ?>
+ * 调用：<?php echo getBuildTime($this->options->setupTime); ?>
  */
 date_default_timezone_set('Asia/Shanghai');
 

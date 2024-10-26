@@ -6,7 +6,14 @@
     <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> -->
 </head>
-<img class="article-TopImg" src="<?php echo thumb($this, $this->options->defaultCover, $this->options->coverName, in_array('displayCover', $this->options->useDefaultCover)); ?>"/>
+<img class="article-TopImg" src="<?php if ($this->fields->cover) 
+    {
+        echo $this->fields->cover();
+    } elseif (in_array('displayCover', $this->options->useDefaultCover)) 
+    {
+        echo $this->options->defaultCover;
+    }
+?>" />
 <div class="article-body card bottom-margin">
     <h1 class="article-title"><?php $this->title() ?></h1>
     <div class="article-content">
