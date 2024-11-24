@@ -1,10 +1,7 @@
-.navbar {
-    /* 导航栏基础样式 */
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#navbar-main-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 37.5px 0;
 }
 
 .navbar-box {
@@ -85,7 +82,7 @@
     color: var(--fontColour);
 }
 
-.nav-menu-button a {
+#menu-button {
     /* 导航栏“菜单”按钮 */
     display: none;
 }
@@ -110,23 +107,21 @@
     padding: 20px;
 }
 @media (max-width: 1030px) {
-    .navbar-box {
+    #navbar-main-container {
         /* 导航栏内部结构 */    
-        margin: 0 auto;
         max-width: 690px;
-        padding: 30px;
     }
 }
 @media (max-width: 700px) {
-    .navbar-box {
-        /* 导航栏内部结构 */
-        margin: 0 30px;
+    #navbar-main-container {
+        /* 导航栏内部结构 */    
+        max-width: 85%;
     }
     .nav-button {
         /* 导航栏按钮 */
         display: none;
     }
-    .nav-menu-button a {
+    #menu-button {
         /* 导航栏“菜单”按钮 */
         display: revert;
     }
